@@ -1489,6 +1489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d808e9474d22748be5af6a93df411c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inmortalDev: 1
 --- !u!82 &1530576450
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2712,7 +2713,7 @@ PrefabInstance:
     - target: {fileID: 5105518592867210572, guid: 09d8f4d72a2cb564391917936f3271bd,
         type: 3}
       propertyPath: speed
-      value: 5
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 5105518592867210574, guid: 09d8f4d72a2cb564391917936f3271bd,
         type: 3}

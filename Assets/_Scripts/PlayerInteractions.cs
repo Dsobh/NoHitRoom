@@ -11,6 +11,8 @@ public class PlayerInteractions : MonoBehaviour
     public delegate void GameOverDelegate();
     public static event GameOverDelegate OnGameOver;
 
+    public bool inmortalDev = false;
+
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -25,7 +27,7 @@ public class PlayerInteractions : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        if(other.gameObject.CompareTag("DeadZone"))
+        if(other.gameObject.CompareTag("DeadZone") && inmortalDev==false)
         {
             Destroy(other.gameObject);
             Destroy(this.gameObject);
@@ -40,7 +42,7 @@ public class PlayerInteractions : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collisionInfo)
     {
-        if(collisionInfo.gameObject.CompareTag("DeadZone"))
+        if(collisionInfo.gameObject.CompareTag("DeadZone") && inmortalDev==false)
         {
             if(OnGameOver != null)
             {
