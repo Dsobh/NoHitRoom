@@ -2710,10 +2710,20 @@ PrefabInstance:
       propertyPath: m_Simulated
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5105518592867210571, guid: 09d8f4d72a2cb564391917936f3271bd,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5105518592867210572, guid: 09d8f4d72a2cb564391917936f3271bd,
         type: 3}
       propertyPath: speed
-      value: 6.5
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5105518592867210572, guid: 09d8f4d72a2cb564391917936f3271bd,
+        type: 3}
+      propertyPath: inputThreshold
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5105518592867210574, guid: 09d8f4d72a2cb564391917936f3271bd,
         type: 3}
