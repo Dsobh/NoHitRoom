@@ -1477,6 +1477,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5105518594225393640}
   m_PrefabAsset: {fileID: 0}
+--- !u!58 &1530576444 stripped
+CircleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 5105518592867210575, guid: 09d8f4d72a2cb564391917936f3271bd,
+    type: 3}
+  m_PrefabInstance: {fileID: 5105518594225393640}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1530576449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1489,7 +1495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d808e9474d22748be5af6a93df411c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inmortalDev: 1
+  inmortalDev: 0
 --- !u!82 &1530576450
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2715,10 +2721,35 @@ PrefabInstance:
       propertyPath: m_LinearDrag
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5105518592867210571, guid: 09d8f4d72a2cb564391917936f3271bd,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5105518592867210572, guid: 09d8f4d72a2cb564391917936f3271bd,
         type: 3}
       propertyPath: speed
-      value: 0.1
+      value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5105518592867210572, guid: 09d8f4d72a2cb564391917936f3271bd,
+        type: 3}
+      propertyPath: collider2D
+      value: 
+      objectReference: {fileID: 1530576444}
+    - target: {fileID: 5105518592867210572, guid: 09d8f4d72a2cb564391917936f3271bd,
+        type: 3}
+      propertyPath: dashAmount
+      value: 2.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5105518592867210572, guid: 09d8f4d72a2cb564391917936f3271bd,
+        type: 3}
+      propertyPath: smoothTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5105518592867210572, guid: 09d8f4d72a2cb564391917936f3271bd,
+        type: 3}
+      propertyPath: dashCouldDown
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5105518592867210572, guid: 09d8f4d72a2cb564391917936f3271bd,
         type: 3}
