@@ -23,6 +23,8 @@ public class Movement : MonoBehaviour
     [SerializeField]
     private float dashCouldDown = 15f;
     private float dashCouldDownCounter = 15f;
+    [SerializeField]
+    private GameObject timeZone;
 
     
     // Start is called before the first frame update
@@ -34,6 +36,11 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.Q) && !timeZone.activeInHierarchy)
+        {
+            timeZone.transform.position = this.gameObject.transform.position;
+            timeZone.SetActive(true);
+        }
         //Capturamos el input. GetAxisRaw devuelve valores 0 y 1, no intermedios
         moveDirection.x = Input.GetAxisRaw(Constants.HORIZONTAL);
         moveDirection.y = Input.GetAxisRaw(Constants.VERTICAL);

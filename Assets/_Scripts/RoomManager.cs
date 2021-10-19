@@ -27,7 +27,7 @@ public class RoomManager : MonoBehaviour
     **El muro tambien es el tiempo de vida de los obstaculos si tipo==3
     */
     //Patrón rejilla
-    private float[,] patron1={
+   /* private float[,] patron1={
         {0,0,0,0,0,0,0},
         {0,0,2,0,0,0,0},
         {0,0,4,0,0,0,0},
@@ -100,7 +100,7 @@ public class RoomManager : MonoBehaviour
         {4,1,23,0,0,0,0},
         {4,2,5,0,-3f,0,0},
         {6,-1,0,0,0,0,0}
-    };
+    };*/
 
     //Obstaculos + disparos
     private float[,] patron5={
@@ -126,7 +126,7 @@ public class RoomManager : MonoBehaviour
         {8,2,5,0,-0.6f,0,0}
     };
 
-private float[,] patron6={
+/*private float[,] patron6={
         {0,0,0,0,0,0,0},
         {0,2,5,0,-0.6f,0,0},
         {0,0,2,0,0,0,0},
@@ -208,7 +208,7 @@ private float[,] patron7={
         {0,1,24,0,0,0,0},
         {0,1,26,0,0,1,0.5f},
         {0,2,5,0,-0.6f,0,0}
-    };
+    };*/
     
     private List<float[,]> patrones=new List<float[,]>();
 
@@ -222,15 +222,15 @@ private float[,] patron7={
     // Start is called before the first frame update
     void Start()
     {
-        patrones.Add(patron1);
+       /* patrones.Add(patron1);
         patrones.Add(patron2);
         patrones.Add(patron3);
-        patrones.Add(patron4);
+        patrones.Add(patron4);*/
         patrones.Add(patron5);
-        patrones.Add(patron6);
+        /*patrones.Add(patron6);
         patrones.Add(patron7);
         patrones.Add(patron8);
-        patrones.Add(patron9);
+        patrones.Add(patron9);*/
 
 
         //Recorremos todos los hijos y los añadimos a una lista

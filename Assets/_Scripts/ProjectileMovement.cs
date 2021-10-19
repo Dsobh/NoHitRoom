@@ -38,5 +38,17 @@ public class ProjectileMovement : MonoBehaviour
     {
         if(other.name.Contains("Destructor"))
             Destroy(this.gameObject);
+
+        if(other.CompareTag("TimeZone"))
+        {
+                speed = speed/7;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other) {
+        if(other.CompareTag("TimeZone"))
+        {
+                speed = speed*7;
+        }
     }
 }
