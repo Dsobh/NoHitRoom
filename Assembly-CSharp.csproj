@@ -36,23 +36,26 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\_Scripts\CSVLoader.cs" />
-     <Compile Include="Assets\_Scripts\Constants.cs" />
+     <Compile Include="Assets\_Scripts\Data\Constants.cs" />
      <Compile Include="Assets\_Scripts\GameManager.cs" />
-     <Compile Include="Assets\_Scripts\LocalizationSystem.cs" />
      <Compile Include="Assets\_Scripts\MenuManager.cs" />
      <Compile Include="Assets\_Scripts\Movement.cs" />
      <Compile Include="Assets\_Scripts\ObstacleController.cs" />
      <Compile Include="Assets\_Scripts\PlayerInteractions.cs" />
      <Compile Include="Assets\_Scripts\ProjectileMovement.cs" />
-     <Compile Include="Assets\_Scripts\RoomData.cs" />
-     <Compile Include="Assets\_Scripts\RoomManager.cs" />
+     <Compile Include="Assets\_Scripts\RoomScripts\Cell.cs" />
+     <Compile Include="Assets\_Scripts\RoomScripts\Room.cs" />
+     <Compile Include="Assets\_Scripts\RoomScripts\RoomCollection.cs" />
+     <Compile Include="Assets\_Scripts\RoomScripts\RoomData.cs" />
+     <Compile Include="Assets\_Scripts\RoomScripts\RoomManager.cs" />
+     <Compile Include="Assets\_Scripts\RoomScripts\WallController.cs" />
      <Compile Include="Assets\_Scripts\RotateObject.cs" />
-     <Compile Include="Assets\_Scripts\TextLocalizer.cs" />
+     <Compile Include="Assets\_Scripts\Text&amp;Localization\CSVLoader.cs" />
+     <Compile Include="Assets\_Scripts\Text&amp;Localization\LocalizationSystem.cs" />
+     <Compile Include="Assets\_Scripts\Text&amp;Localization\TextLocalizer.cs" />
      <Compile Include="Assets\_Scripts\TimeController.cs" />
      <Compile Include="Assets\_Scripts\TimeZoneController.cs" />
      <Compile Include="Assets\_Scripts\UIManager.cs" />
-     <Compile Include="Assets\_Scripts\WallController.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
