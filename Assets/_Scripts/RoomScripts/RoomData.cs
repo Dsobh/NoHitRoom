@@ -10,7 +10,7 @@ public class RoomData : MonoBehaviour
     private string JSON_path;
     private RoomCollection _roomsCollection;
 
-    private Cell[,] cells;
+    public Cell[,] cells;
     
     #region Variables Matriz de celdas
     [Header("Datos matriz")]
@@ -20,7 +20,7 @@ public class RoomData : MonoBehaviour
     public float coordinateY = 0;
 
     [SerializeField, Tooltip("Tamaño de la celda o de la pared. Cuantas unidades ocupará.")]
-    private int sizeCell;
+    public int sizeCell;
     
     [SerializeField]
     private int rows;
@@ -119,9 +119,9 @@ public class RoomData : MonoBehaviour
                 prefabCell = ObtainCellPrefab(cells[i,j].getCellType());
                 if(prefabCell != null)
                 {
-                    Debug.Log(position);
                     GameObject newInstance = Instantiate(prefabCell, position, prefabCell.transform.rotation, this.transform);
-                    newInstance.transform.localScale = Vector3.Scale(newInstance.transform.localScale, new Vector3(sizeCell, sizeCell,1)); //Podemos hacer esto para escalarlo
+                    Vector3 newScale = Vector3.Scale(newInstance.transform.localScale, new Vector3(sizeCell, sizeCell,1)); //Podemos hacer esto para escalarlo
+                    newInstance.transform.localScale = newScale;
                 }
             }
         }
@@ -167,5 +167,10 @@ public class RoomData : MonoBehaviour
         {
             wall.transform.position = newPosition - new Vector3(1,0,0);
         }
+    }
+
+    public int GetSizeCell()
+    {
+        return sizeCell;
     }
 }

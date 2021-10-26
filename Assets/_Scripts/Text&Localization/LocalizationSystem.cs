@@ -10,7 +10,7 @@ public class LocalizationSystem
         Spanish
     }
 
-    public static Language _language = Language.English;
+    public static Language _language = Language.Spanish;
 
     private static Dictionary<string, string> englishDictionary;
     private static Dictionary<string, string> spanishDictionary;

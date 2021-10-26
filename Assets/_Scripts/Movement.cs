@@ -25,7 +25,6 @@ public class Movement : MonoBehaviour
     private float dashCouldDownCounter = 15f;
     [SerializeField]
     private GameObject timeZone;
-
     
     // Start is called before the first frame update
     void Start()
