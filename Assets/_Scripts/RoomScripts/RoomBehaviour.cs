@@ -1,9 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public class RoomBehaviour : MonoBehaviour
 {
+    [SerializeField, Tooltip("Path del archivo JSON con los datos de la habitación")]
+    private string JSON_path;
+
+    public PatternCollection _patternCollection;
+
     [SerializeField, Tooltip("Prefab del rayo que lanza la pared")]
     private GameObject wallRay;
 
@@ -15,6 +21,7 @@ public class RoomBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ReadPatternJSON();
         cellMatrix = this.GetComponent<RoomData>().cells;
     }
 
@@ -25,7 +32,8 @@ public class RoomBehaviour : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.K))
         {
             //SOLO DEBUG
-            SpawnRay(cellMatrix[0, 1]);
+            //SpawnRay(cellMatrix[0, 1]);
+            ExecutePattern(_patternCollection.patterns[0].sequence[1].elements);
         }
     }
 
@@ -68,8 +76,34 @@ public class RoomBehaviour : MonoBehaviour
         }
     }
 
+    public void ExecutePattern(Vector3[] patternSequence)
+    {
+        for(int i=0; i<patternSequence.Length; i++)
+        {
+            Debug.Log(patternSequence[i]);
+            int attackType = (int)patternSequence[i].z;
+
+            if(attackType == 0)
+            {
+                SpawnRay(cellMatrix[(int)patternSequence[i].y, (int)patternSequence[i].x]);
+            }
+        }
+    }
+
     public float GetMaxLenghtOfRay()
     {
         return maxLenghtOfRay;
+    }
+
+    /// <summary>
+    /// Carga el Json con los datos de la habitación en un objeto RoomCollection
+    /// </summary>
+    private void ReadPatternJSON()
+    {
+        using (StreamReader stream = new StreamReader(JSON_path))
+        {
+            string json = stream.ReadToEnd();
+            _patternCollection = JsonUtility.FromJson<PatternCollection>(json);
+        }
     }
 }

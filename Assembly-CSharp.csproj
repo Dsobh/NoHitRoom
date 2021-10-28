@@ -36,6 +36,9 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\_Scripts\Attacks_scripts\Elements.cs" />
+     <Compile Include="Assets\_Scripts\Attacks_scripts\PatternCollection.cs" />
+     <Compile Include="Assets\_Scripts\Attacks_scripts\Patterns.cs" />
      <Compile Include="Assets\_Scripts\Attacks_scripts\RayController.cs" />
      <Compile Include="Assets\_Scripts\Data\Constants.cs" />
      <Compile Include="Assets\_Scripts\GameManager.cs" />

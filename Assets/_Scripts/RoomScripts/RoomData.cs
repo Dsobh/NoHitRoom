@@ -96,9 +96,7 @@ public class RoomData : MonoBehaviour
         for(int i=0; i<newRoom.walls.Length; i++)
         {
             Vector3 wallData = newRoom.walls[i];
-            Debug.Log(newRoom.walls[i].z);
             cells[(int)wallData.x, (int)wallData.y].setCellType((int)wallData.z);
-            Debug.Log(cells[(int)wallData.x, (int)wallData.y].getCellType());
         }
 
     }
